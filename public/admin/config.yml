@@ -6,6 +6,8 @@ backend:
   cms_label_prefix: "MMM"
   base_url: "https://mmmdesign.netlify.app/" # IMPORTANT
   auth_scope: "repo"
+  oauth_client_id: "Ov23libcUvwWGYvEH6CM"
+
 
 
 media_folder: "public/uploads"
