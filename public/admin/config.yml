@@ -1,0 +1,79 @@
+backend:
+  name: github
+  repo: tufara18-png/eheh
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+local_backend: true
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    label_singular: "Project"
+    folder: "content/projects"
+    create: true
+    extension: "json"
+    format: "json"
+    slug: "{{slug}}"
+    fields:
+      - label: "Title (EN)"
+        name: "title_en"
+        widget: "string"
+      - label: "Title (FR)"
+        name: "title_fr"
+        widget: "string"
+        required: false
+      - label: "Slug"
+        name: "slug"
+        widget: "string"
+      - label: "Category (EN)"
+        name: "category_en"
+        widget: "string"
+      - label: "Category (FR)"
+        name: "category_fr"
+        widget: "string"
+        required: false
+      - label: "Year"
+        name: "year"
+        widget: "number"
+      - label: "Short description (EN)"
+        name: "short_en"
+        widget: "text"
+      - label: "Short description (FR)"
+        name: "short_fr"
+        widget: "text"
+        required: false
+      - label: "Long description (EN)"
+        name: "long_en"
+        widget: "text"
+        required: false
+      - label: "Long description (FR)"
+        name: "long_fr"
+        widget: "text"
+        required: false
+      - label: "Thumbnail"
+        name: "thumbnail"
+        widget: "image"
+      - label: "Gallery"
+        name: "gallery"
+        widget: "list"
+        field:
+          label: "Image"
+          name: "image"
+          widget: "image"
+
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - file: "content/settings.json"
+        label: "Global Settings"
+        name: "settings"
+        fields:
+          - label: "Vimeo Background URL"
+            name: "vimeoUrl"
+            widget: "string"
+          - label: "Behind The Scenes Image"
+            name: "btsImage"
+            widget: "image"

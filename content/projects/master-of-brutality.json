@@ -1,0 +1,17 @@
+{
+  "title_en": "Master of Brutality",
+  "title_fr": "Master of Brutality",
+  "slug": "master-of-brutality",
+  "category_en": "Sculpture & Installation",
+  "category_fr": "Sculpture & installation",
+  "year": 2023,
+  "short_en": "A sculptural installation investigating power, fragility, and excess.",
+  "short_fr": "Une installation sculpturale qui explore le pouvoir, la fragilit\u00e9 et l\u2019exc\u00e8s.",
+  "long_en": "Master of Brutality is a large-scale installation combining metal, textile, and cast elements to build a fragmented monument.",
+  "long_fr": "Master of Brutality est une installation \u00e0 grande \u00e9chelle combinant m\u00e9tal, textile et pi\u00e8ces moul\u00e9es pour construire un monument fragment\u00e9.",
+  "thumbnail": "/uploads/mob-thumb.jpg",
+  "gallery": [
+    "/uploads/mob-1.jpg",
+    "/uploads/mob-2.jpg"
+  ]
+}

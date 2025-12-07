@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Instrument+Serif:ital@0;1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 45 10% 95%;
+    --foreground: 0 0% 8%;
+
+    --card: 45 8% 92%;
+    --card-foreground: 0 0% 8%;
+
+    --popover: 45 10% 95%;
+    --popover-foreground: 0 0% 8%;
+
+    --primary: 0 0% 8%;
+    --primary-foreground: 45 10% 95%;
+
+    --secondary: 30 15% 85%;
+    --secondary-foreground: 0 0% 8%;
+
+    --muted: 30 10% 88%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 20 60% 55%;
+    --accent-foreground: 45 10% 95%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 10% 80%;
+    --input: 30 10% 80%;
+    --ring: 0 0% 8%;
+
+    --radius: 0px;
+
+    /* Custom design tokens */
+    --font-display: 'Instrument Serif', serif;
+    --font-mono: 'Space Mono', monospace;
+    
+    --shadow-brutal: 4px 4px 0px hsl(0 0% 8%);
+    --shadow-brutal-lg: 8px 8px 0px hsl(0 0% 8%);
+    --shadow-brutal-accent: 4px 4px 0px hsl(20 60% 55%);
+    
+    --transition-brutal: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 0% 6%;
+    --foreground: 45 10% 95%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 45 10% 95%;
+
+    --popover: 0 0% 6%;
+    --popover-foreground: 45 10% 95%;
+
+    --primary: 45 10% 95%;
+    --primary-foreground: 0 0% 6%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 45 10% 95%;
+
+    --muted: 0 0% 18%;
+    --muted-foreground: 45 5% 60%;
+
+    --accent: 20 60% 55%;
+    --accent-foreground: 45 10% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 45 10% 95%;
+    
+    --shadow-brutal: 4px 4px 0px hsl(45 10% 95%);
+    --shadow-brutal-lg: 8px 8px 0px hsl(45 10% 95%);
+    --shadow-brutal-accent: 4px 4px 0px hsl(20 60% 55%);
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  #lovable-badge {
+    display: none !important;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-mono);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+  
+  .shadow-brutal {
+    box-shadow: var(--shadow-brutal);
+  }
+  
+  .shadow-brutal-lg {
+    box-shadow: var(--shadow-brutal-lg);
+  }
+  
+  .shadow-brutal-accent {
+    box-shadow: var(--shadow-brutal-accent);
+  }
+  
+  .hover-brutal {
+    transition: var(--transition-brutal);
+  }
+  
+  .hover-brutal:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px hsl(var(--foreground));
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-in {
+    animation: slideIn 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}

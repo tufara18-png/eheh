@@ -1,0 +1,17 @@
+{
+  "title_en": "Apart Studio",
+  "title_fr": "Apart Studio",
+  "slug": "apart-studio",
+  "category_en": "Furniture",
+  "category_fr": "Mobilier",
+  "year": 2024,
+  "short_en": "A series of benches exploring brutalist volumes and soft textures.",
+  "short_fr": "Une s\u00e9rie de bancs explorant les volumes brutalistes et les textures douces.",
+  "long_en": "Apart Studio is a body of work that explores the tension between heaviness and lightness through concrete-inspired forms and soft surfaces.",
+  "long_fr": "Apart Studio explore la tension entre lourdeur et l\u00e9g\u00e8ret\u00e9 \u00e0 travers des formes inspir\u00e9es du b\u00e9ton et des surfaces adoucies.",
+  "thumbnail": "/uploads/apart-thumb.jpg",
+  "gallery": [
+    "/uploads/apart-1.jpg",
+    "/uploads/apart-2.jpg"
+  ]
+}

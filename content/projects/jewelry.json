@@ -1,0 +1,17 @@
+{
+  "title_en": "Jewelry",
+  "title_fr": "Bijoux",
+  "slug": "jewelry",
+  "category_en": "Jewelry",
+  "category_fr": "Bijoux",
+  "year": 2020,
+  "short_en": "Sculptural rings and wearable pieces in metal and resin.",
+  "short_fr": "Bagues sculpturales et pi\u00e8ces portables en m\u00e9tal et r\u00e9sine.",
+  "long_en": "This ongoing series of jewelry treats the hand as a small stage for sculptural gestures, using raw and polished surfaces.",
+  "long_fr": "Cette s\u00e9rie continue de bijoux traite la main comme une petite sc\u00e8ne pour des gestes sculpturaux, utilisant des surfaces brutes et polies.",
+  "thumbnail": "/uploads/jewelry-thumb.jpg",
+  "gallery": [
+    "/uploads/jewelry-1.jpg",
+    "/uploads/jewelry-2.jpg"
+  ]
+}
