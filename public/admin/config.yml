@@ -5,16 +5,7 @@ backend:
   auth_type: token
   use_graphql: false
   base_url: ""
-  commit_messages:
-    create: "Create {{collection}} '{{slug}}'"
-    update: "Update {{collection}} '{{slug}}'"
-    delete: "Delete {{collection}} '{{slug}}'"
-    uploadMedia: "Upload media"
-    deleteMedia: "Delete media"
-
-# IMPORTANT :
-# Laisse auth_token vide — Cloudflare Pages injecte GITHUB_TOKEN automatiquement
-auth_token: ""
+  auth_token: ""
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
@@ -26,8 +17,8 @@ collections:
     label: "Projects"
     folder: "content/projects"
     create: true
-    extension: "json"
     format: "json"
+    extension: "json"
     slug: "{{slug}}"
     fields:
       - { label: "Title (EN)", name: "title_en", widget: "string" }
@@ -44,14 +35,14 @@ collections:
       - label: "Gallery"
         name: "gallery"
         widget: list
-        field: { label: "Image", name: "image", widget: "image" }
+        field: {label: "Image", name: "image", widget: "image"}
 
   - name: "settings"
-    label: "Site Settings"
+    label: "Settings"
     files:
       - file: "content/settings.json"
         label: "Global Settings"
         name: "settings"
         fields:
           - { label: "Vimeo URL", name: "vimeoUrl", widget: "string" }
-          - { label: "Behind The Scenes Image", name: "btsImage", widget: "image" }
+          - { label: "Behind the Scenes Image", name: "btsImage", widget: "image" }
