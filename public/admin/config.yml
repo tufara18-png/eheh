@@ -2,91 +2,49 @@ backend:
   name: github
   repo: tufara18-png/eheh
   branch: main
+  auth_type: token
+  use_graphql: false
   base_url: ""
-  auth_type: "token"
   commit_messages:
-    create: "Create {{collection}} “{{slug}}”"
-    update: "Update {{collection}} “{{slug}}”"
-    delete: "Delete {{collection}} “{{slug}}”"
+    create: "Create {{collection}} '{{slug}}'"
+    update: "Update {{collection}} '{{slug}}'"
+    delete: "Delete {{collection}} '{{slug}}'"
     uploadMedia: "Upload media"
     deleteMedia: "Delete media"
 
-# IMPORTANT : le token est lu via variable d’environnement dans Netlify
-# Ajoute GITHUB_TOKEN dans Netlify → Environment variables
-# (NE METS RIEN ICI, Laisse vide. Decap CMS le récupère automatiquement.)
+# IMPORTANT :
+# Laisse auth_token vide — Cloudflare Pages injecte GITHUB_TOKEN automatiquement
 auth_token: ""
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
 
-local_backend: false
+publish_mode: editorial_workflow
 
 collections:
   - name: "projects"
     label: "Projects"
-    label_singular: "Project"
     folder: "content/projects"
     create: true
     extension: "json"
     format: "json"
     slug: "{{slug}}"
     fields:
-      - label: "Title (EN)"
-        name: "title_en"
-        widget: "string"
-
-      - label: "Title (FR)"
-        name: "title_fr"
-        widget: "string"
-        required: false
-
-      - label: "Slug"
-        name: "slug"
-        widget: "string"
-
-      - label: "Category (EN)"
-        name: "category_en"
-        widget: "string"
-
-      - label: "Category (FR)"
-        name: "category_fr"
-        widget: "string"
-        required: false
-
-      - label: "Year"
-        name: "year"
-        widget: "number"
-
-      - label: "Short description (EN)"
-        name: "short_en"
-        widget: "text"
-
-      - label: "Short description (FR)"
-        name: "short_fr"
-        widget: "text"
-        required: false
-
-      - label: "Long description (EN)"
-        name: "long_en"
-        widget: "text"
-        required: false
-
-      - label: "Long description (FR)"
-        name: "long_fr"
-        widget: "text"
-        required: false
-
-      - label: "Thumbnail"
-        name: "thumbnail"
-        widget: "image"
-
+      - { label: "Title (EN)", name: "title_en", widget: "string" }
+      - { label: "Title (FR)", name: "title_fr", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Category (EN)", name: "category_en", widget: "string" }
+      - { label: "Category (FR)", name: "category_fr", widget: "string" }
+      - { label: "Year", name: "year", widget: "number" }
+      - { label: "Short EN", name: "short_en", widget: "text" }
+      - { label: "Short FR", name: "short_fr", widget: "text" }
+      - { label: "Long EN", name: "long_en", widget: "text" }
+      - { label: "Long FR", name: "long_fr", widget: "text" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
       - label: "Gallery"
         name: "gallery"
-        widget: "list"
-        field:
-          label: "Image"
-          name: "image"
-          widget: "image"
+        widget: list
+        field: { label: "Image", name: "image", widget: "image" }
 
   - name: "settings"
     label: "Site Settings"
@@ -95,10 +53,5 @@ collections:
         label: "Global Settings"
         name: "settings"
         fields:
-          - label: "Vimeo Background URL"
-            name: "vimeoUrl"
-            widget: "string"
-
-          - label: "Behind The Scenes Image"
-            name: "btsImage"
-            widget: "image"
+          - { label: "Vimeo URL", name: "vimeoUrl", widget: "string" }
+          - { label: "Behind The Scenes Image", name: "btsImage", widget: "image" }
